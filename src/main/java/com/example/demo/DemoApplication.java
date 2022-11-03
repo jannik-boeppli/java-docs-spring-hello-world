@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 
 @SpringBootApplication
 @RestController
-@RequestMapping("")
+@RequestMapping("/get")
 public class DemoApplication extends SpringBootServletInitializer {
 
 
