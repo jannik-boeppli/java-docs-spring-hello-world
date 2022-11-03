@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    azure:
+      storage:
+        blob:
+          account-name: [storage-account-name]
+          account-key: [storage-account-access-key]
+          endpoint: [storage-blob-service-endpoint]
