@@ -11,7 +11,7 @@ import java.io.OutputStream;
 import java.nio.charset.Charset;
 
 @RestController
-@RequestMapping("blob")
+@RequestMapping("/blob")
 public class BlobController extends SpringBootServletInitializer {
 
     @Value("azure-blob://uploadtarget/EMS_Weekly.txt")
