@@ -14,7 +14,7 @@ import java.nio.charset.Charset;
 @RequestMapping("blob")
 public class BlobController {
 
-    @Value("azure-blob://<your-container-name>/<your-blob-name>")
+    @Value("azure-blob://uploadtarget/EMS_Weekly.txt")
     private Resource blobFile;
 
     @GetMapping("/readBlobFile")
