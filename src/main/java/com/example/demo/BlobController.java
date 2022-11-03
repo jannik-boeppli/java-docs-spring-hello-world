@@ -13,7 +13,7 @@ import java.nio.charset.Charset;
 @RequestMapping("/blob")
 public class BlobController {
 
-    @Value("azure-blob://uploadtarget/EMS_Weekly.txt")
+    @Value("azure-blob://uploadtarget")
     private Resource blobFile;
 
     @GetMapping("/readBlobFile")
@@ -30,4 +30,27 @@ public class BlobController {
         }
         return "file was updated";
     }
+
+    @PostMapping("")
+    public String uploadFileToStorage(@RequestBody File uploadFile){
+        try{
+            File targetFolder = (File) blobFile;
+            if(targetFolder.isDirectory()){
+                uploadFile.setPath(targetFolder.getPath() + "/" + uploadFile.getName());
+                uploadFile.createNewFile();
+            }
+        }catch(Exception e){
+            return "File upload failed";
+        }
+        
+        return "File upload successful";
+    }
+
+
+    @GetMapping("/")
+    public String resource() throws IOException {
+        return blobFile.toString();
+    }
+
+
 }
