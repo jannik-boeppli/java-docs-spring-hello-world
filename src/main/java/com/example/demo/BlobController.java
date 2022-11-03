@@ -5,14 +5,13 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.WritableResource;
 import org.springframework.util.StreamUtils;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.charset.Charset;
 
 @RestController
 @RequestMapping("/blob")
-public class BlobController extends SpringBootServletInitializer {
+public class BlobController {
 
     @Value("azure-blob://uploadtarget/EMS_Weekly.txt")
     private Resource blobFile;
