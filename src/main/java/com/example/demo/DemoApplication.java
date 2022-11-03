@@ -19,6 +19,6 @@ public class DemoApplication extends SpringBootServletInitializer {
 
 	@RequestMapping("/")
 	String getPage() {
-		return PAGE_HEADER + FILE_UPLOAD + PAGE_FOOTER;
+		return "PAGE_HEADER + FILE_UPLOAD + PAGE_FOOTER";
 	}
 }
