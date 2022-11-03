@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServlet;
 
 @SpringBootApplication
-@RestController("")
+@RestController
+@RequestMapping("")
 public class DemoApplication extends SpringBootServletInitializer {
 
 
