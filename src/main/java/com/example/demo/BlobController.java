@@ -1,4 +1,4 @@
-package com.<your-resource-group>.<your-artifact-name>;
+package com.example.demo;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
