@@ -3,6 +3,6 @@ spring:
     azure:
       storage:
         blob:
-          account-name: [storage-account-name]
-          account-key: [storage-account-access-key]
-          endpoint: [storage-blob-service-endpoint]
+          account-name: teststoragejannikboeppli
+          account-key: Ub0ZHg1GI5QT0VJr3FgGD+Vi2BTsq0ihnqMmfF9DT2zZ+LvkmShPl8HNcHoUxKavrtaU1YLepODU+AStD0orXA==
+          endpoint: https://teststoragejannikboeppli.blob.core.windows.net/uploadsource

@@ -9,17 +9,7 @@ import javax.servlet.http.HttpServlet;
 
 @SpringBootApplication
 @RestController
-public class DemoApplication extends HttpServlet {
-
-	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
-	}
-
-	@RequestMapping("/")
-	String getPage() {
-		return PAGE_HEADER + FILE_UPLOAD + PAGE_FOOTER;
-	}
-
+public class DemoApplication extends SpringBootServletInitializer {
 	private String PAGE_HEADER = '
 		<!DOCTYPE html>
 		<html lang="en">
@@ -41,4 +31,14 @@ public class DemoApplication extends HttpServlet {
     	</form>';
 
 	private String PAGE_FOOTER = '</body></html>';
+
+
+	public static void main(String[] args) {
+		SpringApplication.run(DemoApplication.class, args);
+	}
+
+	@RequestMapping("/")
+	String getPage() {
+		return PAGE_HEADER + FILE_UPLOAD + PAGE_FOOTER;
+	}
 }
