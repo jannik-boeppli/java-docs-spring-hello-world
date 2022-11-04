@@ -37,7 +37,7 @@ public class BlobController {
         try{
             File targetFolder = (File) blobFile;
             if(targetFolder.isDirectory()){
-                uploadFile.renameTo(targetFolder.getAbsolutePath() + "/" + uploadFile.getName());
+                uploadFile.renameTo(new File(targetFolder.getAbsolutePath() + "/" + uploadFile.getName()));
                 uploadFile.createNewFile();
             }
         }catch(Exception e){
