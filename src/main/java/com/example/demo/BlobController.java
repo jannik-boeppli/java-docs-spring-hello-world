@@ -37,7 +37,7 @@ public class BlobController {
         try{
             File targetFolder = (File) blobFile;
             if(targetFolder.isDirectory()){
-                uploadFile.setPath(targetFolder.getPath() + "/" + uploadFile.getName());
+                uploadFile.setName(targetFolder.getAbsolutePath() + "/" + uploadFile.getName());
                 uploadFile.createNewFile();
             }
         }catch(Exception e){
