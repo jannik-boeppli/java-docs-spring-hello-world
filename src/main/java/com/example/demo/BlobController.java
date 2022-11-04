@@ -32,7 +32,7 @@ public class BlobController {
         return "file was updated";
     }
 
-    @PostMapping("")
+    @PostMapping("/")
     public String uploadFileToStorage(@RequestBody File uploadFile){
         try{
             File targetFolder = (File) blobFile;
